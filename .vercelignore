@@ -1,0 +1,5 @@
+assets/images/
+.git/
+.qa/
+*.md
+scripts/

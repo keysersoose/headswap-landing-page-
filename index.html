@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#050505" />
+    <meta
+      name="description"
+      content="Headloom gives catalogue teams one place to prepare, generate, review, and export AI head replacements."
+    />
+    <title>Headloom | AI head replacement for catalogue teams</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="#hero" aria-label="Headloom home">
+        <svg class="brand-mark" viewBox="0 0 28 44" aria-hidden="true">
+          <path d="M4 2v40M24 2v40M4 13h20M4 31h20" />
+          <path d="M14 7v30" stroke-dasharray="2 4" />
+        </svg>
+        <span>Headloom</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#product">Product</a>
+        <a href="#features">Results</a>
+        <a href="#workflow">Workflow</a>
+      </nav>
+      <a class="button button-solid button-small" href="#demo">Request access</a>
+    </header>
+
+    <main id="main">
+      <section class="hero section-shell" id="hero" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">AI head replacement workspace</p>
+          <h1 id="hero-title">
+            <span>Head swaps</span>
+            <strong>for catalogue</strong>
+            <span>production teams</span>
+          </h1>
+          <p class="hero-copy">
+            Bring an approved identity and a target image.<br />
+            Generate, review, and export from one controlled workflow.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-solid" href="#product">See the workspace</a>
+            <a class="button button-outline" href="#features">Inspect results</a>
+          </div>
+          <p class="hero-note">For catalogue, campaign, and studio production teams</p>
+        </div>
+        <div class="scroll-cue" aria-hidden="true"><span></span>Scroll to inspect</div>
+      </section>
+
+      <section class="lab-section section-shell" id="features" aria-labelledby="lab-title">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">Result comparisons</p>
+            <h2 id="lab-title">Inspect<br /><span>every change</span></h2>
+          </div>
+          <div class="heading-note">
+            <span class="technical-label">High-resolution output</span>
+            <p>Inspect how the model handles angles, lighting, hair, and occlusion.</p>
+          </div>
+        </div>
+
+        <div class="lab-grid">
+          <article class="lab-card reveal" data-split-card style="--split: 54%">
+            <div class="split-media">
+              <img src="/assets/media/15-t.webp" alt="Original outdoor fashion portrait" />
+              <div class="split-after">
+                <img src="/assets/media/15-r.webp" alt="Headloom result for outdoor fashion portrait" />
+              </div>
+              <span class="split-rule" aria-hidden="true"><i></i></span>
+              <input class="split-control" type="range" min="4" max="96" value="54" aria-label="Compare original and result for outdoor portrait" />
+              <span class="media-label media-label-left">Original</span>
+              <span class="media-label media-label-right">Result</span>
+            </div>
+            <div class="card-caption"><h3>Outdoor portrait</h3><p>Target / result</p></div>
+          </article>
+
+          <article class="lab-card reveal" data-split-card style="--split: 49%">
+            <div class="split-media">
+              <img src="/assets/media/14-t.webp" alt="Original editorial portrait" />
+              <div class="split-after">
+                <img src="/assets/media/14-r.webp" alt="Headloom result for editorial portrait" />
+              </div>
+              <span class="split-rule" aria-hidden="true"><i></i></span>
+              <input class="split-control" type="range" min="4" max="96" value="49" aria-label="Compare original and result for editorial portrait" />
+              <span class="media-label media-label-left">Original</span>
+              <span class="media-label media-label-right">Result</span>
+            </div>
+            <div class="card-caption"><h3>Editorial portrait</h3><p>Target / result</p></div>
+          </article>
+
+          <article class="lab-card reveal" data-split-card style="--split: 46%">
+            <div class="split-media">
+              <img src="/assets/media/5-t.webp" alt="Original red studio portrait" />
+              <div class="split-after">
+                <img src="/assets/media/5-r.webp" alt="Headloom result for red studio portrait" />
+              </div>
+              <span class="split-rule" aria-hidden="true"><i></i></span>
+              <input class="split-control" type="range" min="4" max="96" value="46" aria-label="Compare original and result for studio portrait" />
+              <span class="media-label media-label-left">Original</span>
+              <span class="media-label media-label-right">Result</span>
+            </div>
+            <div class="card-caption"><h3>Studio portrait</h3><p>Target / result</p></div>
+          </article>
+        </div>
+
+        <div class="matrix reveal" aria-labelledby="matrix-title">
+          <div class="matrix-heading">
+            <p class="eyebrow" id="matrix-title">Identity matrix</p>
+            <p>Focus or hover to reveal each approved source face.</p>
+          </div>
+          <div class="matrix-grid">
+            <button class="matrix-card" type="button" aria-label="Reveal source for identity example one">
+              <img src="/assets/media/12-r.webp" alt="Headloom identity result one" />
+              <img class="matrix-source" src="/assets/media/12-f.webp" alt="Source identity one" />
+              <span>Source revealed</span>
+            </button>
+            <button class="matrix-card" type="button" aria-label="Reveal source for identity example two">
+              <img src="/assets/media/11-r.webp" alt="Headloom identity result two" />
+              <img class="matrix-source" src="/assets/media/11-f.webp" alt="Source identity two" />
+              <span>Source revealed</span>
+            </button>
+            <button class="matrix-card" type="button" aria-label="Reveal source for identity example three">
+              <img src="/assets/media/17-r.webp" alt="Headloom identity result three" />
+              <img class="matrix-source" src="/assets/media/17-f.webp" alt="Source identity three" />
+              <span>Source revealed</span>
+            </button>
+            <button class="matrix-card" type="button" aria-label="Reveal source for identity example four">
+              <img src="/assets/media/13-r.webp" alt="Headloom identity result four" />
+              <img class="matrix-source" src="/assets/media/13-f.webp" alt="Source identity four" />
+              <span>Source revealed</span>
+            </button>
+            <button class="matrix-card" type="button" aria-label="Reveal source for identity example five">
+              <img src="/assets/media/4-r.webp" alt="Headloom identity result five" />
+              <img class="matrix-source" src="/assets/media/4-f.webp" alt="Source identity five" />
+              <span>Source revealed</span>
+            </button>
+            <button class="matrix-card" type="button" aria-label="Reveal source for identity example six">
+              <img src="/assets/media/10-r.webp" alt="Headloom identity result six" />
+              <img class="matrix-source" src="/assets/media/10-f.webp" alt="Source identity six" />
+              <span>Source revealed</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-section section-shell" id="product" aria-labelledby="product-title">
+        <div class="demo-heading reveal">
+          <p class="eyebrow">The product</p>
+          <h2 id="product-title">One workspace from approved identity to reviewed output.</h2>
+          <p>Every image below belongs to the same example. Reference, target, and result stay locked together.</p>
+        </div>
+
+        <div class="workspace reveal" aria-label="Headloom product workspace preview">
+          <div class="workspace-topbar">
+            <div><span class="workspace-dot"></span><strong>SS26 catalogue / Look 042</strong></div>
+            <span class="workspace-status" data-run-status aria-live="polite">Ready to generate</span>
+          </div>
+          <div class="workspace-body">
+            <aside class="workspace-sidebar" aria-label="Workflow steps">
+              <span class="sidebar-label">Workflow</span>
+              <ol>
+                <li class="is-complete"><span>1</span><div><strong>Identity</strong><small>Approved</small></div></li>
+                <li class="is-complete"><span>2</span><div><strong>Target</strong><small>Ready</small></div></li>
+                <li data-generation-step><span>3</span><div><strong>Generate</strong><small>Not started</small></div></li>
+                <li data-review-step><span>4</span><div><strong>Review</strong><small>Waiting</small></div></li>
+              </ol>
+              <div class="workspace-policy"><span>Consent record</span><strong>Attached</strong></div>
+            </aside>
+            <div class="workspace-main">
+              <div class="workspace-toolbar">
+                <div><span class="technical-label">Controlled example</span><h3>Generate one review-ready output</h3></div>
+                <button class="button button-solid" type="button" data-run-demo>Generate preview</button>
+              </div>
+              <div class="input-grid">
+                <figure class="input-card">
+                  <img src="/assets/media/9-f.webp" alt="Approved reference identity" />
+                  <figcaption><span>Identity</span><strong>Reference approved</strong></figcaption>
+                </figure>
+                <figure class="input-card">
+                  <img src="/assets/media/9-t.webp" alt="Target fashion image before head replacement" />
+                  <figcaption><span>Target</span><strong>Composition locked</strong></figcaption>
+                </figure>
+                <figure class="input-card output-card">
+                  <div class="output-wrap"><img src="/assets/media/9-r.webp" alt="Headloom result using the shown reference and target" /><span class="processing-sweep" aria-hidden="true"></span></div>
+                  <figcaption><span>Output</span><strong data-output-state>Waiting to generate</strong></figcaption>
+                </figure>
+              </div>
+              <div class="workspace-controls" aria-label="Example generation settings">
+                <div><span>Identity strength</span><strong>Balanced</strong></div>
+                <div><span>Output</span><strong>High resolution</strong></div>
+                <div><span>Review gate</span><strong>Required</strong></div>
+                <div class="progress-track" aria-hidden="true"><i data-progress></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow-section section-shell" id="workflow" aria-labelledby="workflow-title">
+        <div class="workflow-heading reveal">
+          <p class="eyebrow">Product workflow</p>
+          <h2 id="workflow-title">Run every catalogue through the same review path.</h2>
+        </div>
+        <div class="feature-grid reveal">
+          <article><span>Identity library</span><h3>Keep approved source identities organised.</h3><p>Separate reference assets from targets and retain the permission context your team needs.</p></article>
+          <article><span>Batch queue</span><h3>Move a catalogue through one review path.</h3><p>Structure work by project, look, and approval state instead of passing loose files around.</p></article>
+          <article><span>Visual review</span><h3>Compare the target and output before export.</h3><p>Inspect lighting, hair, occlusion, and composition with a clear human approval gate.</p></article>
+          <article><span>Production handoff</span><h3>Export only the outputs your team approves.</h3><p>Define format, resolution, retention, and delivery expectations during the pilot.</p></article>
+        </div>
+      </section>
+
+      <section class="demo-section section-shell" id="demo" aria-labelledby="demo-title">
+        <div class="demo-heading reveal">
+          <p class="eyebrow">Inspect the output</p>
+          <h2 id="demo-title">Target and result, aligned exactly.</h2>
+          <p>This comparison uses the same target and its corresponding Headloom output.</p>
+        </div>
+        <div class="inspection reveal">
+          <div class="mode-switch" role="group" aria-label="Inspection mode">
+            <button class="mode-button is-active" type="button" data-mode="compare" aria-pressed="true">Compare</button>
+            <button class="mode-button" type="button" data-mode="lab" aria-pressed="false">Detail view</button>
+          </div>
+          <div class="inspection-stage" data-inspection style="--compare: 50%; --scan-x: 50%; --scan-y: 50%">
+            <img class="inspection-before" src="/assets/media/9-t.webp" alt="Original target for inspection" />
+            <div class="inspection-after"><img id="inspection-result" src="/assets/media/9-r.webp" alt="Corresponding Headloom result for inspection" /></div>
+            <span class="inspection-rule" aria-hidden="true"><i></i></span>
+            <input class="inspection-range" type="range" min="2" max="98" value="50" aria-label="Drag to compare the original and corresponding result" />
+            <span class="inspection-label label-before">Target</span>
+            <span class="inspection-label label-after">Result</span>
+            <div class="scanner" aria-hidden="true"></div>
+            <div class="lab-readout" aria-hidden="true"><span>Detail view</span><span>Human review</span></div>
+          </div>
+          <p class="inspection-help" data-compare-help>Drag the white thread to compare.</p>
+          <p class="inspection-help" data-lab-help hidden>Move across the output to inspect detail.</p>
+        </div>
+      </section>
+
+      <section class="trust-section section-shell" aria-labelledby="trust-title">
+        <div class="trust-heading reveal">
+          <p class="eyebrow">Built for production</p>
+          <h2 id="trust-title">Review the details your production team checks.</h2>
+        </div>
+        <div class="proof-grid reveal">
+          <article><span>01</span><h3>Identity control</h3><p>Work from approved source identities and defined target assets.</p></article>
+          <article><span>02</span><h3>Pipeline fit</h3><p>Scope delivery, review, retention, and deployment around your production needs.</p></article>
+          <article><span>03</span><h3>Human review</h3><p>Validate a controlled pilot before committing to production volume.</p></article>
+        </div>
+      </section>
+
+      <section class="faq-section section-shell" id="faq" aria-labelledby="faq-title">
+        <div class="faq-heading reveal"><p class="eyebrow">FAQ</p><h2 id="faq-title">Frequently asked questions</h2></div>
+        <div class="faq-list reveal">
+          <details>
+            <summary>What is Headloom?<span aria-hidden="true">+</span></summary>
+            <p>Headloom is an AI head-replacement workflow for catalogue and marketing teams that need controlled talent swaps without re-shooting. It is designed to preserve lighting, composition, and fine detail.</p>
+          </details>
+          <details>
+            <summary>How fast can a project turn around?<span aria-hidden="true">+</span></summary>
+            <p>Turnaround depends on shot count, resolution, review cycles, and deployment model. We scope a reviewable pilot first, then agree production service levels around the approved workflow.</p>
+          </details>
+          <details>
+            <summary>Do we retain control over likeness rights?<span aria-hidden="true">+</span></summary>
+            <p>Yes. Work is performed only against approved assets and applicable likeness permissions. Commercial terms, usage rights, retention, and audit requirements are agreed before production.</p>
+          </details>
+        </div>
+        <p class="faq-contact reveal">Still have questions? <a href="mailto:suraj@headloom.com">suraj@headloom.com</a></p>
+      </section>
+
+      <section class="cta-section section-shell" aria-labelledby="cta-title">
+        <div class="cta-inner reveal">
+          <p class="eyebrow">Start with one controlled test</p>
+          <h2 id="cta-title">See whether Headloom fits your production pipeline.</h2>
+          <a class="button button-solid" href="mailto:suraj@headloom.com?subject=Headloom%20demo">Book a live demo</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>© 2026 Headloom</span><span>Dark by design</span></footer>
+  </body>
+</html>

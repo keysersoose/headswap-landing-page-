@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+.vercel/
+*.log
+assets/images/
+
+.vercel
+.env*
+.qa/
