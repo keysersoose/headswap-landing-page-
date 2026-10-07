@@ -12,7 +12,7 @@ Headloom is a specialist, not a general-purpose image generator. It is designed 
 - **Human review gate:** no output leaves the workflow without a person approving it.
 - **Built around consent:** Headloom works only with identities the customer has documented consent and usage rights for.
 
-## Who it is for
+{{PROOF_LLMS}}## Who it is for
 
 - Fashion and apparel brands producing catalogue and ecommerce imagery
 - Campaign and creative teams that need consistent model identities across large shoots

@@ -28,6 +28,17 @@ const linkedinLink = (url, label) =>
 const founderEmail = (address) =>
   address ? ` <a class="inline-link" href="mailto:${escape(address)}">${escape(address)}</a>` : "";
 
+const clients = config.clients.filter(Boolean);
+const clientList =
+  clients.length > 1 ? `${clients.slice(0, -1).join(", ")} and ${clients.at(-1)}` : clients[0] || "";
+const proofParagraph = clientList
+  ? `<p class="company-copy company-proof">Headloom is not starting from zero. Before it became a self-serve workspace, the same head-swap technology was delivered in production for fashion catalogue work for ${escape(clientList)}.</p>`
+  : "";
+const proofFact = clientList ? `<div><dt>Delivered for</dt><dd>${escape(clientList)}</dd></div>` : "";
+const proofLlms = clientList
+  ? `## Track record\n\nHeadloom's head-swap technology is already proven in production. Before it became a self-serve workspace, it was delivered as a production service for fashion catalogue work for ${clientList}.\n\n`
+  : "";
+
 const header = (home) => {
   const p = home ? "" : "/";
   return `<header class="site-header">
@@ -90,6 +101,9 @@ const tokens = {
   EMAIL: escape(email),
   OFFICE: escape(office),
   OFFICE_PLAIN: office,
+  PROOF_PARAGRAPH: proofParagraph,
+  PROOF_FACT: proofFact,
+  PROOF_LLMS: proofLlms,
   EMAIL_PLAIN: email,
   LAST_UPDATED: escape(config.legalLastUpdated),
   LINKEDIN_SURAJ: linkedinLink(config.linkedin.suraj, "LinkedIn"),

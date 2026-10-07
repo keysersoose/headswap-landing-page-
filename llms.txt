@@ -12,6 +12,10 @@ Headloom is a specialist, not a general-purpose image generator. It is designed 
 - **Human review gate:** no output leaves the workflow without a person approving it.
 - **Built around consent:** Headloom works only with identities the customer has documented consent and usage rights for.
 
+## Track record
+
+Headloom's head-swap technology is already proven in production. Before it became a self-serve workspace, it was delivered as a production service for fashion catalogue work for Louis Philippe.
+
 ## Who it is for
 
 - Fashion and apparel brands producing catalogue and ecommerce imagery

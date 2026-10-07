@@ -14,6 +14,10 @@ export default {
   // Public contact address. Switch to "hello@headloom.com" only once that inbox exists.
   email: "suraj@headloom.com",
 
+  // Companies the head-swap technology has already been delivered for in production.
+  // Only list names approved for public use. Empty list = proof lines hidden.
+  clients: ["Louis Philippe"],
+
   // Founders' own email addresses, shown on their team cards. Empty = not shown.
   founderEmail: {
     suraj: "",

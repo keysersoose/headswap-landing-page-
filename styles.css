@@ -411,3 +411,5 @@ button { color: inherit; }
 }
 .team-card .inline-link { display: block; width: fit-content; margin-top: 6px; color: var(--white); font-size: 13px; text-underline-offset: 3px; }
 .team-card .inline-link:first-of-type { margin-top: 14px; }
+.company-proof { margin-top: 16px; }
+.page-article .company-proof { color: #c7c7c7; font-size: 15px; }
