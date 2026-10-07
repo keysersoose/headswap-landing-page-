@@ -49,6 +49,7 @@ for (const page of pages) {
   requireMatch(source.includes('class="site-footer"') && source.includes('class="footer-legal"'), `${page}: site footer is missing.`);
   requireMatch(source.includes('class="site-header"'), `${page}: site header is missing.`);
   requireMatch(!/Latent\s*Mind|LLPIN/i.test(source), `${page}: must not name the legal entity.`);
+  requireMatch(!/suraj/i.test(source), `${page}: must not name Suraj.`);
   requireMatch(!source.includes("cal.com/suraj-"), `${page}: links to the old cal.com booking page.`);
   requireMatch(!/\{\{|\[(FULL|HEADLOOM|DATE|LinkedIn)/.test(visible), `${page}: unfilled placeholder text is visible.`);
   for (const [, href] of source.matchAll(/href="(\/[^"#?]*)/g)) {
@@ -58,7 +59,7 @@ for (const page of pages) {
 
 const llms = existsSync(resolve(root, "llms.txt")) ? readFileSync(resolve(root, "llms.txt"), "utf8") : "";
 requireMatch(llms.startsWith("# Headloom"), "llms.txt is missing or malformed (run npm run build).");
-requireMatch(!/\{\{|Latent\s*Mind|LLPIN/i.test(llms), "llms.txt has an unfilled token or names the legal entity.");
+requireMatch(!/\{\{|Latent\s*Mind|LLPIN|suraj|8m\s*studio/i.test(llms), "llms.txt has an unfilled token or names the legal entity.");
 
 if (failures.length) {
   console.error(failures.map((failure) => `FAIL: ${failure}`).join("\n"));

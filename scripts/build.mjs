@@ -31,13 +31,16 @@ const founderEmail = (address) =>
 const clients = config.clients.filter(Boolean);
 const clientList =
   clients.length > 1 ? `${clients.slice(0, -1).join(", ")} and ${clients.at(-1)}` : clients[0] || "";
+const volume = (config.monthlyVolume || "").trim();
 const proofParagraph = clientList
-  ? `<p class="company-copy company-proof">Headloom is not starting from zero. Before it became a self-serve workspace, the same head-swap technology was delivered in production for fashion catalogue work for ${escape(clientList)}.</p>`
+  ? `<p class="company-copy company-proof">Headloom is not starting from zero. Before it became a self-serve workspace, the same head-swap technology was delivered in production for fashion catalogue work for ${escape(clientList)}${volume ? `, at ${escape(volume)} approved images a month` : ""}, with human review on every frame.</p>`
   : "";
-const proofFact = clientList ? `<div><dt>Delivered for</dt><dd>${escape(clientList)}</dd></div>` : "";
-const proofLlms = clientList
-  ? `## Track record\n\nHeadloom's head-swap technology is already proven in production. Before it became a self-serve workspace, it was delivered as a production service for fashion catalogue work for ${clientList}.\n\n`
-  : "";
+const proofFact = [
+  clientList ? `<div><dt>Delivered for</dt><dd>${escape(clientList)}</dd></div>` : "",
+  volume ? `<div><dt>Production volume</dt><dd>${escape(volume[0].toUpperCase() + volume.slice(1))} approved catalogue images a month</dd></div>` : "",
+].filter(Boolean).join("\n            ");
+const PROOF_CLIENTS_PLAIN = clientList || "confidential fashion catalogue programmes";
+const PROOF_VOLUME_PLAIN = volume || "production";
 
 const header = (home) => {
   const p = home ? "" : "/";
@@ -103,12 +106,11 @@ const tokens = {
   OFFICE_PLAIN: office,
   PROOF_PARAGRAPH: proofParagraph,
   PROOF_FACT: proofFact,
-  PROOF_LLMS: proofLlms,
+  PROOF_CLIENTS: PROOF_CLIENTS_PLAIN,
+  PROOF_VOLUME: PROOF_VOLUME_PLAIN,
   EMAIL_PLAIN: email,
   LAST_UPDATED: escape(config.legalLastUpdated),
-  LINKEDIN_SURAJ: linkedinLink(config.linkedin.suraj, "LinkedIn"),
   LINKEDIN_VISHAAL: linkedinLink(config.linkedin.vishaal, "LinkedIn"),
-  EMAIL_SURAJ: founderEmail(config.founderEmail.suraj),
   EMAIL_VISHAAL: founderEmail(config.founderEmail.vishaal),
 };
 
