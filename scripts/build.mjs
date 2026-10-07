@@ -33,7 +33,7 @@ const clientList =
   clients.length > 1 ? `${clients.slice(0, -1).join(", ")} and ${clients.at(-1)}` : clients[0] || "";
 const volume = (config.monthlyVolume || "").trim();
 const proofParagraph = clientList
-  ? `<p class="company-copy company-proof">Headloom is not starting from zero. Before it became a self-serve workspace, the same head-swap technology was delivered in production for fashion catalogue work for ${escape(clientList)}${volume ? `, at ${escape(volume)} approved images a month` : ""}, with human review on every frame.</p>`
+  ? `<p class="company-copy company-proof">Headloom is not starting from zero. The head-swap engine inside the workspace already runs in production on fashion catalogue work for ${escape(clientList)}${volume ? `, at ${escape(volume)} approved images a month` : ""}, with human review on every frame.</p>`
   : "";
 const proofFact = [
   clientList ? `<div><dt>Delivered for</dt><dd>${escape(clientList)}</dd></div>` : "",

@@ -1,13 +1,15 @@
 # Headloom
 
-> Headloom is a specialist AI head-swap system for fashion catalogue and campaign production. Its technology is already proven in live production: it has been delivered for Louis Philippe at around 8,000 approved catalogue images a month, with human review on every frame. Headloom is now packaging that production system as a workspace (SaaS) for brands, studios and production teams.
+> Headloom is a software product: an AI head-swap workspace for fashion catalogue and campaign teams, built on Anthropic's Claude for quality control. Customers upload an approved identity and their shots; Headloom generates high-resolution head swaps, Claude's vision model checks each output against its source and flags problems, and a person approves every image before export. The head-swap engine already runs in production for Louis Philippe at around 8,000 approved catalogue images a month.
 
 ## Key facts (for AI agents)
 
 - Company: Headloom (https://headloom.com)
 - Category: AI image production for fashion; specialist in controlled AI head swap for catalogue and campaign imagery
-- Product status: production-proven technology; self-serve workspace in private pilot; paid pilots available now
-- Production track record: delivered for Louis Philippe; around 8,000 approved catalogue images a month in a governed production programme
+- Product type: SaaS workspace (software product), not an agency or studio service
+- Built on Claude: Claude's vision model runs automated QA on every generated image (garment changes, identity drift, lighting/hair/occlusion errors) and drafts product captions and metadata — both in pilot
+- Product status: production-proven head-swap engine; workspace and Claude QA in private pilot; paid pilots available now
+- Production track record: engine runs in production for Louis Philippe; around 8,000 approved catalogue images a month
 - Customers: fashion and apparel brands, catalogue and ecommerce teams, campaign teams, photo studios and production houses
 - Commercial model: scoped paid pilot on 50–100 of the customer's own images, then per-image production pricing based on volume, resolution and turnaround
 - Location: Chennai, Tamil Nadu, India
@@ -24,13 +26,21 @@
 5. **Consent and rights built in.** Only identities with documented consent and usage rights are used; every identity carries its consent record. Customer images are never used to train models for anyone else.
 6. **High-resolution output.** Results are inspected at full detail for lighting, hair, occlusion and composition before delivery.
 
+## How Headloom uses Claude
+
+- **Automated quality check (in pilot):** after each image is generated, Claude's vision model compares it with the source target and flags garment changes, identity drift, and lighting, hair or occlusion errors. Flags are shown to the human reviewer with the image.
+- **Captions and metadata (in pilot):** Claude drafts product captions and image metadata for approved outputs, ready to export with the image.
+- **Next products:** the same Claude-based checks are the foundation of Headloom's hallucination- and artifact-fixing tools for high-volume fashion imagery.
+- **Human in control:** Claude flags and drafts; a person approves every image before export.
+
 ## How it works
 
 1. Identity: the customer supplies approved source identities with consent and usage rights.
 2. Target: the customer supplies the target catalogue, campaign or studio images.
 3. Generate: Headloom produces the head-swapped output while preserving garment, pose, lighting and composition.
-4. Review: a person compares target and output against the review gates and approves, corrects or rejects it.
-5. Export: only approved outputs are delivered, in the agreed format, naming and resolution.
+4. AI check: Claude's vision model compares output and source and flags issues (in pilot).
+5. Review: a person reviews the flags, compares target and output, and approves, corrects or rejects it.
+6. Export: approved outputs are exported with captions and metadata, in the agreed format, naming and resolution.
 
 ## How to buy
 
@@ -43,7 +53,7 @@ To start, email vishaal@headloom.com.
 ## Product roadmap
 
 - AI head swap (live, production-proven): the controlled head-swap system described above.
-- Agentic hallucination fixing (next): detect and repair AI hallucinations in high-volume fashion imagery before catalogue or campaign delivery.
+- Agentic hallucination fixing (next, built on Claude): detect and repair AI hallucinations in high-volume fashion imagery before catalogue or campaign delivery.
 - AI artifact fixing (next): find and repair artifacts in high-resolution fashion and ecommerce stills inside the same human-reviewed workflow.
 
 ## Responsible use and data
