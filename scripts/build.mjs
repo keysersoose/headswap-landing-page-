@@ -25,6 +25,9 @@ const demoAttrs = `href="${escape(DEMO_URL)}"${demoIsBooking ? ' target="_blank"
 const linkedinLink = (url, label) =>
   url ? ` <a class="inline-link" href="${escape(url)}" target="_blank" rel="noopener noreferrer">${label}</a>` : "";
 
+const founderEmail = (address) =>
+  address ? ` <a class="inline-link" href="mailto:${escape(address)}">${escape(address)}</a>` : "";
+
 const header = (home) => {
   const p = home ? "" : "/";
   return `<header class="site-header">
@@ -50,7 +53,6 @@ const footer = `<footer class="site-footer">
         <div class="footer-col">
           <p class="footer-brand">Headloom</p>
           <p>AI head-swap and image-quality tools for fashion and catalogue production.</p>
-          <p>Headloom is a product of Latent Mind Labs LLP.</p>
         </div>
         <nav class="footer-col" aria-label="Footer">
           <p class="footer-label">Links</p>
@@ -89,6 +91,8 @@ const tokens = {
   LAST_UPDATED: escape(config.legalLastUpdated),
   LINKEDIN_SURAJ: linkedinLink(config.linkedin.suraj, "LinkedIn"),
   LINKEDIN_VISHAAL: linkedinLink(config.linkedin.vishaal, "LinkedIn"),
+  EMAIL_SURAJ: founderEmail(config.founderEmail.suraj),
+  EMAIL_VISHAAL: founderEmail(config.founderEmail.vishaal),
 };
 
 // Tokens can contain other tokens (header -> demo link), so render until stable.

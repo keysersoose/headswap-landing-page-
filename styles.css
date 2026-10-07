@@ -409,3 +409,5 @@ button { color: inherit; }
   .page-article p, .page-article li { font-size: 14px; }
   .site-header .button-small { padding-inline: 12px; font-size: 12px; }
 }
+.team-card .inline-link { display: block; width: fit-content; margin-top: 6px; color: var(--white); font-size: 13px; text-underline-offset: 3px; }
+.team-card .inline-link:first-of-type { margin-top: 14px; }

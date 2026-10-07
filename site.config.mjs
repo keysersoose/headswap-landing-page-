@@ -14,11 +14,17 @@ export default {
   // Public contact address. Switch to "hello@headloom.com" only once that inbox exists.
   email: "suraj@headloom.com",
 
+  // Founders' own email addresses, shown on their team cards. Empty = not shown.
+  founderEmail: {
+    suraj: "",
+    vishaal: "vishaal@headloom.com",
+  },
+
   // LinkedIn URLs. Any left empty are simply not shown.
   linkedin: {
     company: "",
     suraj: "",
-    vishaal: "",
+    vishaal: "https://www.linkedin.com/in/vishaal-r",
   },
 
   // Shown as "Last updated" on /privacy and /terms. Set to the deploy date.
