@@ -5,9 +5,17 @@ Source-controlled Headloom product site. It presents the real reference, target,
 ## Run locally
 
 ```powershell
+npm run build
 npm run verify
 npm run dev
 ```
+
+## Editing pages
+
+Pages are generated from `src/` by `scripts/build.mjs`; the shared header and footer live there too.
+Edit `src/index.html` or `src/pages/*.html`, never the generated `index.html` / `*/index.html`, then run `npm run build` and commit both.
+
+Values still to be supplied (cal.com demo link, registered office street address, contact email, LinkedIn URLs, legal "Last updated" date) live in `site.config.mjs`. Change them there and rebuild.
 
 Open `http://127.0.0.1:4173`.
 

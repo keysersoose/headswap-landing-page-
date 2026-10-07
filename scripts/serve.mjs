@@ -12,6 +12,11 @@ const types = {
   ".json": "application/json; charset=utf-8",
   ".svg": "image/svg+xml",
   ".webp": "image/webp",
+  ".jpg": "image/jpeg",
+  ".png": "image/png",
+  ".ico": "image/x-icon",
+  ".xml": "application/xml; charset=utf-8",
+  ".txt": "text/plain; charset=utf-8",
 };
 
 createServer((request, response) => {
@@ -22,8 +27,17 @@ createServer((request, response) => {
     return;
   }
 
+  if (url.pathname === "/company") {
+    response.writeHead(308, { Location: "/about" });
+    response.end();
+    return;
+  }
+
+  // Mirror Vercel cleanUrls: /about serves about/index.html.
   const requested = url.pathname === "/" ? "/index.html" : decodeURIComponent(url.pathname);
-  const candidate = normalize(join(root, requested));
+  let candidate = normalize(join(root, requested));
+  if (existsSync(candidate) && statSync(candidate).isDirectory()) candidate = join(candidate, "index.html");
+  else if (!existsSync(candidate) && existsSync(`${candidate}.html`)) candidate = `${candidate}.html`;
   if (!candidate.startsWith(root) || !existsSync(candidate) || !statSync(candidate).isFile()) {
     response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
     response.end("Not found");

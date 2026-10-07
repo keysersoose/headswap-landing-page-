@@ -78,22 +78,7 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
-      <a class="brand" href="#hero" aria-label="Headloom home">
-        <svg class="brand-mark" viewBox="0 0 28 44" aria-hidden="true">
-          <path d="M4 2v40M24 2v40M4 13h20M4 31h20" />
-          <path d="M14 7v30" stroke-dasharray="2 4" />
-        </svg>
-        <span>Headloom</span>
-      </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#product">Product</a>
-        <a href="#features">Results</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="/about">Company</a>
-      </nav>
-      <a class="button button-solid button-small" href="mailto:suraj@headloom.com?subject=Headloom%20demo">Request a demo</a>
-    </header>
+    {{HEADER_HOME}}
 
     <main id="main">
       <section class="hero section-shell" id="hero" aria-labelledby="hero-title">
@@ -383,7 +368,7 @@
             <div><dt>Status</dt><dd>In private pilot with production teams. Live demos on request.</dd></div>
             <div><dt>Company</dt><dd>Latent Mind Labs LLP, Chennai, India</dd></div>
             <div><dt>Founded</dt><dd>2026</dd></div>
-            <div><dt>Contact</dt><dd><a href="mailto:suraj@headloom.com">suraj@headloom.com</a></dd></div>
+            <div><dt>Contact</dt><dd><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></dd></div>
             <div><dt>Website</dt><dd><a href="https://headloom.com">headloom.com</a></dd></div>
           </dl>
         </div>
@@ -393,12 +378,12 @@
             <article class="team-card">
               <h3>Surajnarayanan S</h3>
               <p class="team-role">Co-founder</p>
-              <p>Leads product, customers and creative direction.</p>
+              <p>Leads product, customers and creative direction.{{LINKEDIN_SURAJ}}</p>
             </article>
             <article class="team-card">
               <h3>Vishaal Ravi</h3>
               <p class="team-role">Co-founder</p>
-              <p>Leads engineering and delivery.</p>
+              <p>Leads engineering and delivery.{{LINKEDIN_VISHAAL}}</p>
             </article>
           </div>
           <p class="team-more"><a href="/about">More about the company</a></p>
@@ -436,7 +421,7 @@
             <p>Yes. Work is performed only against approved assets and applicable likeness permissions. Commercial terms, usage rights, retention, and audit requirements are agreed before production.</p>
           </details>
         </div>
-        <p class="faq-contact reveal">Still have questions? <a href="mailto:suraj@headloom.com">suraj@headloom.com</a></p>
+        <p class="faq-contact reveal">Still have questions? <a href="mailto:{{EMAIL}}">{{EMAIL}}</a></p>
       </section>
 
       <section class="pricing-section section-shell" id="pricing" aria-labelledby="pricing-title">
@@ -446,44 +431,18 @@
           <li><span>2</span><h3>Production</h3><p>After the pilot, production is priced per image, based on volume, resolution and turnaround.</p></li>
           <li><span>3</span><h3>Terms agreed up front</h3><p>Usage rights, retention and delivery are fixed in writing before production starts.</p></li>
         </ol>
-        <div class="pricing-action reveal"><a class="button button-solid" href="mailto:suraj@headloom.com?subject=Headloom%20demo">Request a demo</a></div>
+        <div class="pricing-action reveal"><a class="button button-solid" {{DEMO_ATTRS}}>{{DEMO_LABEL}}</a></div>
       </section>
 
       <section class="cta-section section-shell" aria-labelledby="cta-title">
         <div class="cta-inner reveal">
           <p class="eyebrow">Partners &amp; pilots</p>
           <h2 id="cta-title">See the working product — not just the page.</h2>
-          <a class="button button-solid" href="mailto:suraj@headloom.com?subject=Headloom%20demo">Request a demo</a>
+          <a class="button button-solid" {{DEMO_ATTRS}}>{{DEMO_LABEL_LIVE}}</a>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <p class="footer-brand">Headloom</p>
-          <p>AI head-swap and image-quality tools for fashion and catalogue production.</p>
-          <p>Headloom is a product of Latent Mind Labs LLP.</p>
-        </div>
-        <nav class="footer-col" aria-label="Footer">
-          <p class="footer-label">Links</p>
-          <ul>
-            <li><a href="/#product">Product</a></li>
-            <li><a href="/about">Company</a></li>
-            <li><a href="/#pricing">Pricing</a></li>
-            <li><a href="/responsible-use">Responsible use</a></li>
-            <li><a href="/privacy">Privacy</a></li>
-            <li><a href="/terms">Terms</a></li>
-          </ul>
-        </nav>
-        <div class="footer-col">
-          <p class="footer-label">Contact</p>
-          <ul>
-            <li><a href="mailto:suraj@headloom.com">suraj@headloom.com</a></li>
-          </ul>
-        </div>
-      </div>
-      <p class="footer-legal">© 2026 Latent Mind Labs LLP · LLPIN ACY-5121 · Registered office: Chennai, Tamil Nadu, India</p>
-    </footer>
+    {{FOOTER}}
   </body>
 </html>
