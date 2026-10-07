@@ -46,8 +46,9 @@ for (const page of pages) {
   if (!existsSync(file)) { failures.push(`Missing built page: ${page} (run npm run build)`); continue; }
   const source = readFileSync(file, "utf8");
   const visible = source.replace(/<!--[\s\S]*?-->/g, "").replace(/<script[\s\S]*?<\/script>/g, "");
-  requireMatch(source.includes('class="site-footer"') && source.includes("LLPIN ACY-5121"), `${page}: site footer is missing.`);
+  requireMatch(source.includes('class="site-footer"') && source.includes('class="footer-legal"'), `${page}: site footer is missing.`);
   requireMatch(source.includes('class="site-header"'), `${page}: site header is missing.`);
+  requireMatch(!/Latent\s*Mind|LLPIN/i.test(source), `${page}: must not name the legal entity.`);
   requireMatch(!source.includes("cal.com/suraj-"), `${page}: links to the old cal.com booking page.`);
   requireMatch(!/\{\{|\[(FULL|HEADLOOM|DATE|LinkedIn)/.test(visible), `${page}: unfilled placeholder text is visible.`);
   for (const [, href] of source.matchAll(/href="(\/[^"#?]*)/g)) {

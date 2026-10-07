@@ -68,7 +68,8 @@ const footer = `<footer class="site-footer">
         <div class="footer-col">
           <p class="footer-label">Contact</p>
           <ul>
-            <li><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>${
+            <li><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></li>
+            <li>{{OFFICE}}</li>${
               config.linkedin.company
                 ? `\n            <li><a href="${escape(config.linkedin.company)}" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>`
                 : ""
@@ -76,7 +77,7 @@ const footer = `<footer class="site-footer">
           </ul>
         </div>
       </div>
-      <p class="footer-legal">© 2026 Latent Mind Labs LLP · LLPIN ACY-5121 · Registered office: {{OFFICE}}</p>
+      <p class="footer-legal">© 2026 Headloom · headloom.com · {{OFFICE}}</p>
     </footer>`;
 
 const tokens = {
@@ -151,17 +152,17 @@ const pages = [
   {
     slug: "about",
     title: "About | Headloom",
-    description: "Headloom is built by Latent Mind Labs LLP in Chennai, India. Meet the team and see our company details.",
+    description: "Headloom is built in Chennai, India. Meet the team and see our company details.",
   },
   {
     slug: "privacy",
     title: "Privacy Policy | Headloom",
-    description: "How Latent Mind Labs LLP, the company behind Headloom, collects, uses and protects personal data and face images.",
+    description: "How Headloom collects, uses and protects personal data and face images.",
   },
   {
     slug: "terms",
     title: "Terms of Use | Headloom",
-    description: "The terms that govern use of headloom.com and Headloom services provided by Latent Mind Labs LLP.",
+    description: "The terms that govern use of headloom.com and Headloom services.",
   },
   {
     slug: "responsible-use",

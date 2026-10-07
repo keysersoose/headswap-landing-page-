@@ -6,7 +6,7 @@ export default {
   // Leave empty to fall back to an email link and the label "Request a demo".
   demoUrl: "",
 
-  // Street address of the registered office, WITHOUT the
+  // Company street address, WITHOUT the
   // "Thoraipakkam, Chennai, Tamil Nadu, India" part (that is added automatically).
   // While empty, the site shows only "Chennai, Tamil Nadu, India".
   registeredAddress: "",
