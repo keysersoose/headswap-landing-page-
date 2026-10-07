@@ -56,6 +56,10 @@ for (const page of pages) {
   }
 }
 
+const llms = existsSync(resolve(root, "llms.txt")) ? readFileSync(resolve(root, "llms.txt"), "utf8") : "";
+requireMatch(llms.startsWith("# Headloom"), "llms.txt is missing or malformed (run npm run build).");
+requireMatch(!/\{\{|Latent\s*Mind|LLPIN/i.test(llms), "llms.txt has an unfilled token or names the legal entity.");
+
 if (failures.length) {
   console.error(failures.map((failure) => `FAIL: ${failure}`).join("\n"));
   process.exit(1);

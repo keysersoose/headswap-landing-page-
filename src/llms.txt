@@ -1,0 +1,64 @@
+# Headloom
+
+> Headloom is an AI head-swap workspace built specifically for fashion, catalogue and campaign production teams. An approved identity and a target image go in; a human-reviewed, high-resolution output comes out, with lighting, hair, occlusion and composition checked before anything is exported.
+
+Headloom is a specialist, not a general-purpose image generator. It is designed for the way production teams actually work: high image volumes, consent-backed identities, strict review and predictable delivery. Every output goes through a human approval gate, every identity carries its consent record, and customer images are never used to train models for anyone else.
+
+## What Headloom does
+
+- **Controlled AI head swap:** place an approved model identity onto a target fashion image while keeping the garment, pose, lighting and composition of the original shot.
+- **Production workflow, not a one-off tool:** identity library, batch queue by project and look, side-by-side visual review, and export of approved outputs only.
+- **High-resolution output:** results are inspected at full detail for angles, lighting, hair and occlusion before delivery.
+- **Human review gate:** no output leaves the workflow without a person approving it.
+- **Built around consent:** Headloom works only with identities the customer has documented consent and usage rights for.
+
+## Who it is for
+
+- Fashion and apparel brands producing catalogue and ecommerce imagery
+- Campaign and creative teams that need consistent model identities across large shoots
+- Photo studios and production houses handling high image volumes
+
+## How it works
+
+1. Identity: the customer supplies approved source identities with consent and usage rights.
+2. Target: the customer supplies the target images (catalogue, campaign or studio shots).
+3. Generate: Headloom produces the head-swapped output while preserving the original composition.
+4. Review: a person compares target and output and approves or rejects it.
+5. Export: only approved outputs are delivered, in the agreed format and resolution.
+
+## How to buy
+
+1. Paid pilot: a scoped pilot on 50–100 of the customer's own images, so quality is judged on their own catalogue.
+2. Production: after the pilot, production is priced per image, based on volume, resolution and turnaround.
+3. Terms agreed up front: usage rights, retention and delivery are fixed in writing before production starts.
+
+Headloom is currently in private pilot with production teams. Live demos are available on request.
+
+## Product roadmap
+
+- AI head swap (live): the controlled head-swap workspace described above.
+- Agentic hallucination fixing (coming next): detect and repair AI hallucinations in high-volume fashion imagery before it reaches catalogue or campaign delivery.
+- AI artifact fixing (coming next): find and repair artifacts in high-resolution fashion and ecommerce stills, inside the same human-reviewed workflow.
+
+## Responsible use and data
+
+- Consent first: only identities with documented consent and usage rights.
+- No deception: Headloom refuses work meant to impersonate, mislead, sexualise or harass anyone, or that involves minors.
+- Customer images stay theirs: not used to train models for others, deleted after the pilot or on request.
+- Labelling: Headloom supports customers in meeting AI-content disclosure rules, including the EU AI Act.
+
+## Company
+
+- Name: Headloom (headloom.com)
+- Based in: {{OFFICE_PLAIN}}
+- Founded: 2026
+- Co-founders: Surajnarayanan S (product, customers and creative direction) and Vishaal Ravi (engineering and delivery)
+- Contact: {{EMAIL_PLAIN}}
+
+## Key pages
+
+- [Home](https://headloom.com/): product overview, before/after results, workflow, pricing model and FAQ
+- [About](https://headloom.com/about): what Headloom builds, the team and company details
+- [Responsible use](https://headloom.com/responsible-use): consent, review and data principles
+- [Privacy Policy](https://headloom.com/privacy): how personal data and face images are handled
+- [Terms of Use](https://headloom.com/terms): terms for the website and services

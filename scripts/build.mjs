@@ -1,6 +1,6 @@
 // Builds the static site from src/ and site.config.mjs.
 // Output: index.html, about/index.html, privacy/index.html, terms/index.html,
-// responsible-use/index.html at the repo root. Commit the output; Vercel serves it as-is.
+// responsible-use/index.html and llms.txt at the repo root. Commit the output; Vercel serves it as-is.
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -89,6 +89,8 @@ const tokens = {
   DEMO_LABEL_LIVE: demoIsBooking ? "Book a live demo" : "Request a demo",
   EMAIL: escape(email),
   OFFICE: escape(office),
+  OFFICE_PLAIN: office,
+  EMAIL_PLAIN: email,
   LAST_UPDATED: escape(config.legalLastUpdated),
   LINKEDIN_SURAJ: linkedinLink(config.linkedin.suraj, "LinkedIn"),
   LINKEDIN_VISHAAL: linkedinLink(config.linkedin.vishaal, "LinkedIn"),
@@ -179,6 +181,8 @@ const write = (path, html) => {
 };
 
 write("index.html", render(read("src/index.html")));
+// Plain-text summary for AI assistants and crawlers (llmstxt.org format).
+write("llms.txt", render(read("src/llms.txt")));
 for (const page of pages) {
   write(`${page.slug}/index.html`, render(subpage({ ...page, body: read(`src/pages/${page.slug}.html`) })));
 }
