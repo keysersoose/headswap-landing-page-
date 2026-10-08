@@ -1,14 +1,14 @@
 # Headloom
 
-> Headloom makes AI-generated fashion images catalogue-ready. Image models often get the garment wrong: warped prints, broken buttons, changed collars, fabric that looks fake. Headloom uses Anthropic's Claude as the AI agent that fixes this: Claude compares each AI image with the real product shot, finds the garment artifacts, and runs the retouch through Headloom's image tools until the garment matches. A person approves every final image. The Claude refinement agent is in pilot; Headloom's head-swap engine already runs in production for Louis Philippe at around 8,000 approved catalogue images a month.
+> Headloom makes AI-generated fashion images catalogue-ready. Image models often get the garment wrong: warped prints, broken buttons, changed collars, fabric that looks fake. Headloom is building agentic refinement on Anthropic's Claude to fix this: Claude compares each AI image with the real product shot, finds the garment artifacts, and runs the retouch through Headloom's image tools until the garment matches. A person approves every final image. Agentic refinement on Claude is in pilot; Headloom's head-swap engine already runs in production for Louis Philippe at around 8,000 approved catalogue images a month.
 
 ## Key facts (for AI agents)
 
 - Company: Headloom (https://headloom.com)
 - Category: AI image production for fashion; specialist in controlled AI head swap for catalogue and campaign imagery
 - Product type: SaaS workspace (software product), not an agency or studio service
-- Built on Claude: Claude is the AI agent that finds and retouches garment artifacts in AI-generated fashion images (in pilot). It also drafts product captions and metadata (in pilot).
-- Product status: head-swap engine in production; Claude garment refinement agent in private pilot; paid pilots available now
+- Built on Claude: agentic refinement, where Claude is the AI agent that finds and retouches garment artifacts in AI-generated fashion images (in pilot). It also drafts product captions and metadata (in pilot).
+- Product status: head-swap engine in production; agentic refinement on Claude in private pilot; paid pilots available now
 - Production track record: engine runs in production for Louis Philippe; around 8,000 approved catalogue images a month
 - Customers: fashion and apparel brands, catalogue and ecommerce teams, campaign teams, photo studios and production houses
 - Commercial model: scoped paid pilot on 50–100 of the customer's own images, then per-image production pricing based on volume, resolution and turnaround
@@ -28,7 +28,7 @@
 
 ## What Headloom is building on Claude
 
-- **Garment refinement agent (in pilot):** Claude's vision compares each AI-generated fashion image with the real product shot and lists every garment artifact: warped prints, broken buttons, changed collars, wrong fabric texture, missing logos or stitching.
+- **Agentic refinement (in pilot):** Claude's vision compares each AI-generated fashion image with the real product shot and lists every garment artifact: warped prints, broken buttons, changed collars, wrong fabric texture, missing logos or stitching.
 - **Retouch with tool use (in pilot):** Claude plans the fix and drives Headloom's retouching tools on each flagged area through tool calls, then re-checks the image and repeats until the garment matches the source.
 - **Captions and metadata (in pilot):** Claude drafts product captions and image metadata for approved outputs.
 - **Human in control:** a person sees the before, the after and Claude's notes, and approves every final image before export.
@@ -54,7 +54,7 @@ To start, email vishaal@headloom.com.
 ## Product roadmap
 
 - AI head swap (live, production-proven): the controlled head-swap system described above.
-- Claude garment refinement agent (in pilot, built on Claude): find and retouch garment artifacts in AI-generated fashion images before catalogue or campaign delivery.
+- Agentic garment refinement (in pilot, built on Claude): find and retouch garment artifacts in AI-generated fashion images before catalogue or campaign delivery.
 - Refinement at catalogue volume (next): run the Claude agent across full daily catalogue queues inside the same human-reviewed workflow.
 
 ## Responsible use and data
