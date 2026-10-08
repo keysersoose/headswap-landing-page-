@@ -32,10 +32,6 @@
 
 {{ANSWER_BUILDING_PLAIN}}
 
-## What's next
-
-{{CLAUDE_NEXT_PLAIN}}
-
 ## How the Claude agents work
 
 - **Quality control by Claude agents:** every generated image is checked by Claude agents. Claude is the only AI agent in Headloom's stack.

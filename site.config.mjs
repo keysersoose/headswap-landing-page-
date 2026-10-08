@@ -33,12 +33,11 @@ export default {
   },
 
   // Claude Startups program answers. "building" is shown word for word on the homepage, /about
-  // and llms.txt. "support" is the form-only answer; the site says the same thing as normal copy
-  // in "next" (the form question itself is never shown on the site).
+  // and llms.txt. "support" is form-only: the site never says what Headloom wants from Anthropic,
+  // and never shows the form questions.
   claudeAnswers: {
     building: "AI image models often get the garment wrong: warped prints, broken buttons, changed collars, fake-looking fabric. We're building agentic refinement on Claude to fix this. Quality control in Headloom is done by Claude agents, and Claude is the only AI agent we use. Claude compares each AI image with the real product shot, finds these artifacts, and runs the retouch through our tools. A person approves every final image. Our head-swap engine already runs on Louis Philippe catalogue work.",
     support: "We want support from Anthropic in three areas. API credits, so our Claude agents can run quality control and agentic refinement on full catalogue volume in paid pilots, where every image takes several vision calls. Technical guidance on Claude's vision for fine garment detail like prints, stitching and logos, and on tool use so the agents drive our retouching tools reliably. And early access to new vision and agent features, to move from pilot to production faster.",
-    next: "Next, we're taking agentic refinement from pilot to production: running our Claude agents on full catalogue volume in paid pilots, where every image takes several vision calls, sharpening Claude's eye for fine garment detail like prints, stitching and logos, and making the agents drive our retouching tools reliably. We're working with Anthropic's API and newest vision and agent features to get there.",
   },
 
   // Shown as "Last updated" on /privacy and /terms. Set to the deploy date.

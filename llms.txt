@@ -32,10 +32,6 @@
 
 AI image models often get the garment wrong: warped prints, broken buttons, changed collars, fake-looking fabric. We're building agentic refinement on Claude to fix this. Quality control in Headloom is done by Claude agents, and Claude is the only AI agent we use. Claude compares each AI image with the real product shot, finds these artifacts, and runs the retouch through our tools. A person approves every final image. Our head-swap engine already runs on Louis Philippe catalogue work.
 
-## What's next
-
-Next, we're taking agentic refinement from pilot to production: running our Claude agents on full catalogue volume in paid pilots, where every image takes several vision calls, sharpening Claude's eye for fine garment detail like prints, stitching and logos, and making the agents drive our retouching tools reliably. We're working with Anthropic's API and newest vision and agent features to get there.
-
 ## How the Claude agents work
 
 - **Quality control by Claude agents:** every generated image is checked by Claude agents. Claude is the only AI agent in Headloom's stack.
