@@ -1,14 +1,14 @@
 # Headloom
 
-> Headloom is a software product: an AI head-swap workspace for fashion catalogue and campaign teams, built on Anthropic's Claude for quality control. Customers upload an approved identity and their shots; Headloom generates high-resolution head swaps, Claude's vision model checks each output against its source and flags problems, and a person approves every image before export. The head-swap engine already runs in production for {{PROOF_CLIENTS}} at {{PROOF_VOLUME}} approved catalogue images a month.
+> Headloom makes AI-generated fashion images catalogue-ready. Image models often get the garment wrong: warped prints, broken buttons, changed collars, fabric that looks fake. Headloom uses Anthropic's Claude as the AI agent that fixes this: Claude compares each AI image with the real product shot, finds the garment artifacts, and runs the retouch through Headloom's image tools until the garment matches. A person approves every final image. The Claude refinement agent is in pilot; Headloom's head-swap engine already runs in production for {{PROOF_CLIENTS}} at {{PROOF_VOLUME}} approved catalogue images a month.
 
 ## Key facts (for AI agents)
 
 - Company: Headloom (https://headloom.com)
 - Category: AI image production for fashion; specialist in controlled AI head swap for catalogue and campaign imagery
 - Product type: SaaS workspace (software product), not an agency or studio service
-- Built on Claude: Claude's vision model runs automated QA on every generated image (garment changes, identity drift, lighting/hair/occlusion errors) and drafts product captions and metadata — both in pilot
-- Product status: production-proven head-swap engine; workspace and Claude QA in private pilot; paid pilots available now
+- Built on Claude: Claude is the AI agent that finds and retouches garment artifacts in AI-generated fashion images (in pilot). It also drafts product captions and metadata (in pilot).
+- Product status: head-swap engine in production; Claude garment refinement agent in private pilot; paid pilots available now
 - Production track record: engine runs in production for {{PROOF_CLIENTS}}; {{PROOF_VOLUME}} approved catalogue images a month
 - Customers: fashion and apparel brands, catalogue and ecommerce teams, campaign teams, photo studios and production houses
 - Commercial model: scoped paid pilot on 50–100 of the customer's own images, then per-image production pricing based on volume, resolution and turnaround
@@ -26,19 +26,20 @@
 5. **Consent and rights built in.** Only identities with documented consent and usage rights are used; every identity carries its consent record. Customer images are never used to train models for anyone else.
 6. **High-resolution output.** Results are inspected at full detail for lighting, hair, occlusion and composition before delivery.
 
-## How Headloom uses Claude
+## What Headloom is building on Claude
 
-- **Automated quality check (in pilot):** after each image is generated, Claude's vision model compares it with the source target and flags garment changes, identity drift, and lighting, hair or occlusion errors. Flags are shown to the human reviewer with the image.
-- **Captions and metadata (in pilot):** Claude drafts product captions and image metadata for approved outputs, ready to export with the image.
-- **Next products:** the same Claude-based checks are the foundation of Headloom's hallucination- and artifact-fixing tools for high-volume fashion imagery.
-- **Human in control:** Claude flags and drafts; a person approves every image before export.
+- **Garment refinement agent (in pilot):** Claude's vision compares each AI-generated fashion image with the real product shot and lists every garment artifact: warped prints, broken buttons, changed collars, wrong fabric texture, missing logos or stitching.
+- **Retouch with tool use (in pilot):** Claude plans the fix and drives Headloom's retouching tools on each flagged area through tool calls, then re-checks the image and repeats until the garment matches the source.
+- **Captions and metadata (in pilot):** Claude drafts product captions and image metadata for approved outputs.
+- **Human in control:** a person sees the before, the after and Claude's notes, and approves every final image before export.
+- **Next with Claude:** running the agent on full catalogue volume in paid pilots, sharper vision on fine garment detail (prints, stitching, logos), and more reliable tool use across the retouching tools.
 
 ## How it works
 
 1. Identity: the customer supplies approved source identities with consent and usage rights.
 2. Target: the customer supplies the target catalogue, campaign or studio images.
 3. Generate: Headloom produces the head-swapped output while preserving garment, pose, lighting and composition.
-4. AI check: Claude's vision model compares output and source and flags issues (in pilot).
+4. Refine: Claude compares output and source, finds garment artifacts and retouches them through Headloom's tools (in pilot).
 5. Review: a person reviews the flags, compares target and output, and approves, corrects or rejects it.
 6. Export: approved outputs are exported with captions and metadata, in the agreed format, naming and resolution.
 
@@ -53,8 +54,8 @@ To start, email {{EMAIL_PLAIN}}.
 ## Product roadmap
 
 - AI head swap (live, production-proven): the controlled head-swap system described above.
-- Agentic hallucination fixing (next, built on Claude): detect and repair AI hallucinations in high-volume fashion imagery before catalogue or campaign delivery.
-- AI artifact fixing (next): find and repair artifacts in high-resolution fashion and ecommerce stills inside the same human-reviewed workflow.
+- Claude garment refinement agent (in pilot, built on Claude): find and retouch garment artifacts in AI-generated fashion images before catalogue or campaign delivery.
+- Refinement at catalogue volume (next): run the Claude agent across full daily catalogue queues inside the same human-reviewed workflow.
 
 ## Responsible use and data
 
