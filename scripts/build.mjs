@@ -114,9 +114,9 @@ const tokens = {
   LINKEDIN_VISHAAL: linkedinLink(config.linkedin.vishaal, "LinkedIn"),
   EMAIL_VISHAAL: founderEmail(config.founderEmail.vishaal),
   ANSWER_BUILDING: escape(config.claudeAnswers.building),
-  ANSWER_SUPPORT: escape(config.claudeAnswers.support),
+  CLAUDE_NEXT: escape(config.claudeAnswers.next),
   ANSWER_BUILDING_PLAIN: config.claudeAnswers.building,
-  ANSWER_SUPPORT_PLAIN: config.claudeAnswers.support,
+  CLAUDE_NEXT_PLAIN: config.claudeAnswers.next,
 };
 
 // Tokens can contain other tokens (header -> demo link), so render until stable.

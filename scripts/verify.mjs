@@ -65,7 +65,15 @@ requireMatch(!/\{\{|Latent\s*Mind|LLPIN|suraj|8m\s*studio/i.test(llms), "llms.tx
 const { default: siteConfig } = await import("../site.config.mjs");
 const aboutHtml = readFileSync(resolve(root, "about/index.html"), "utf8");
 const llmsTxt = readFileSync(resolve(root, "llms.txt"), "utf8");
-for (const [name, answer] of Object.entries(siteConfig.claudeAnswers)) {
+const formQuestions = ["What are you building on Claude", "Where do you want support from Anthropic", "Where we want support from Anthropic"];
+for (const question of formQuestions) {
+  for (const [page, text] of [["homepage", html], ["/about", aboutHtml], ["llms.txt", llmsTxt]]) {
+    requireMatch(!text.includes(question), `${page} must not show the form question "${question}".`);
+  }
+}
+const { building, next } = siteConfig.claudeAnswers;
+requireMatch(siteConfig.claudeAnswers.support.length < 500, 'Claude answer "support" must be under 500 characters.');
+for (const [name, answer] of Object.entries({ building, next })) {
   const htmlAnswer = answer.replace(/&/g, "&amp;");
   requireMatch(answer.length < 500, `Claude answer "${name}" must be under 500 characters.`);
   requireMatch(html.includes(htmlAnswer), `Homepage must show the Claude answer "${name}" word for word.`);

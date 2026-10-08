@@ -28,13 +28,13 @@
 5. **Consent and rights built in.** Only identities with documented consent and usage rights are used; every identity carries its consent record. Customer images are never used to train models for anyone else.
 6. **High-resolution output.** Results are inspected at full detail for lighting, hair, occlusion and composition before delivery.
 
-## What are you building on Claude?
+## Agentic refinement on Claude
 
 {{ANSWER_BUILDING_PLAIN}}
 
-## Where do you want support from Anthropic?
+## What's next
 
-{{ANSWER_SUPPORT_PLAIN}}
+{{CLAUDE_NEXT_PLAIN}}
 
 ## How the Claude agents work
 
