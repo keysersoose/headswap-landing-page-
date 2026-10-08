@@ -1,12 +1,14 @@
 # Headloom
 
-> Headloom makes AI-generated fashion images catalogue-ready. Image models often get the garment wrong: warped prints, broken buttons, changed collars, fabric that looks fake. Headloom is building agentic refinement on Anthropic's Claude to fix this: Claude compares each AI image with the real product shot, finds the garment artifacts, and runs the retouch through Headloom's image tools until the garment matches. A person approves every final image. Agentic refinement on Claude is in pilot; Headloom's head-swap engine already runs in production for Louis Philippe at around 8,000 approved catalogue images a month.
+> Headloom makes AI-generated fashion images catalogue-ready. Image models often get the garment wrong: warped prints, broken buttons, changed collars, fabric that looks fake. Headloom is building agentic refinement on Anthropic's Claude to fix this: Claude compares each AI image with the real product shot, finds the garment artifacts, and runs the retouch through Headloom's image tools until the garment matches. Quality control is done by Claude agents, and Claude is the only AI agent Headloom uses. A person approves every final image. Agentic refinement on Claude is in pilot; Headloom's head-swap engine already runs in production for Louis Philippe at around 8,000 approved catalogue images a month.
 
 ## Key facts (for AI agents)
 
 - Company: Headloom (https://headloom.com)
 - Category: AI image production for fashion; specialist in controlled AI head swap for catalogue and campaign imagery
 - Product type: SaaS workspace (software product), not an agency or studio service
+- AI agents: Claude only. Every AI agent in Headloom runs on Anthropic's Claude.
+- Quality control: done by Claude agents on every generated image.
 - Built on Claude: agentic refinement, where Claude is the AI agent that finds and retouches garment artifacts in AI-generated fashion images (in pilot). It also drafts product captions and metadata (in pilot).
 - Product status: head-swap engine in production; agentic refinement on Claude in private pilot; paid pilots available now
 - Production track record: engine runs in production for Louis Philippe; around 8,000 approved catalogue images a month
@@ -28,6 +30,7 @@
 
 ## What Headloom is building on Claude
 
+- **Quality control by Claude agents:** every generated image is checked by Claude agents. Claude is the only AI agent in Headloom's stack.
 - **Agentic refinement (in pilot):** Claude's vision compares each AI-generated fashion image with the real product shot and lists every garment artifact: warped prints, broken buttons, changed collars, wrong fabric texture, missing logos or stitching.
 - **Retouch with tool use (in pilot):** Claude plans the fix and drives Headloom's retouching tools on each flagged area through tool calls, then re-checks the image and repeats until the garment matches the source.
 - **Captions and metadata (in pilot):** Claude drafts product captions and image metadata for approved outputs.

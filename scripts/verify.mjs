@@ -20,7 +20,7 @@ requireMatch((html.match(/data-identity-img src="\/assets\/media\/9-f\.webp"/g) 
 requireMatch((html.match(/9-t\.webp/g) || []).length >= 2, "Workspace and inspector must use the corresponding 9-t target.");
 requireMatch((html.match(/9-r\.webp/g) || []).length >= 2, "Workspace and inspector must use the corresponding 9-r result.");
 requireMatch(html.includes("data-run-demo"), "SaaS generation preview control is missing.");
-requireMatch((html.match(/<details>/g) || []).length === 6, "Expected six closed FAQ accordions.");
+requireMatch((html.match(/<details>/g) || []).length === 7, "Expected seven closed FAQ accordions.");
 requireMatch(!html.includes("Is this only a landing page?"), "The 'only a landing page' FAQ must stay removed.");
 requireMatch(!html.includes("Landing page + working product"), "The old Status line must stay removed.");
 requireMatch(html.includes('id="pricing"'), "Pricing target #pricing is missing.");
