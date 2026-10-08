@@ -28,14 +28,21 @@
 5. **Consent and rights built in.** Only identities with documented consent and usage rights are used; every identity carries its consent record. Customer images are never used to train models for anyone else.
 6. **High-resolution output.** Results are inspected at full detail for lighting, hair, occlusion and composition before delivery.
 
-## What Headloom is building on Claude
+## What are you building on Claude?
+
+{{ANSWER_BUILDING_PLAIN}}
+
+## Where do you want support from Anthropic?
+
+{{ANSWER_SUPPORT_PLAIN}}
+
+## How the Claude agents work
 
 - **Quality control by Claude agents:** every generated image is checked by Claude agents. Claude is the only AI agent in Headloom's stack.
 - **Agentic refinement (in pilot):** Claude's vision compares each AI-generated fashion image with the real product shot and lists every garment artifact: warped prints, broken buttons, changed collars, wrong fabric texture, missing logos or stitching.
 - **Retouch with tool use (in pilot):** Claude plans the fix and drives Headloom's retouching tools on each flagged area through tool calls, then re-checks the image and repeats until the garment matches the source.
 - **Captions and metadata (in pilot):** Claude drafts product captions and image metadata for approved outputs.
 - **Human in control:** a person sees the before, the after and Claude's notes, and approves every final image before export.
-- **Next with Claude:** running the agent on full catalogue volume in paid pilots, sharper vision on fine garment detail (prints, stitching, logos), and more reliable tool use across the retouching tools.
 
 ## How it works
 

@@ -61,6 +61,18 @@ const llms = existsSync(resolve(root, "llms.txt")) ? readFileSync(resolve(root, 
 requireMatch(llms.startsWith("# Headloom"), "llms.txt is missing or malformed (run npm run build).");
 requireMatch(!/\{\{|Latent\s*Mind|LLPIN|suraj|8m\s*studio/i.test(llms), "llms.txt has an unfilled token or names the legal entity.");
 
+// The Claude Startups form answers must appear word for word on the site.
+const { default: siteConfig } = await import("../site.config.mjs");
+const aboutHtml = readFileSync(resolve(root, "about/index.html"), "utf8");
+const llmsTxt = readFileSync(resolve(root, "llms.txt"), "utf8");
+for (const [name, answer] of Object.entries(siteConfig.claudeAnswers)) {
+  const htmlAnswer = answer.replace(/&/g, "&amp;");
+  requireMatch(answer.length < 500, `Claude answer "${name}" must be under 500 characters.`);
+  requireMatch(html.includes(htmlAnswer), `Homepage must show the Claude answer "${name}" word for word.`);
+  requireMatch(aboutHtml.includes(htmlAnswer), `/about must show the Claude answer "${name}" word for word.`);
+  requireMatch(llmsTxt.includes(answer), `llms.txt must include the Claude answer "${name}" word for word.`);
+}
+
 if (failures.length) {
   console.error(failures.map((failure) => `FAIL: ${failure}`).join("\n"));
   process.exit(1);
