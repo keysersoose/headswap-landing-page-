@@ -53,7 +53,6 @@ const header = (home) => {
         <span>Headloom</span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="${p}#claude">Claude</a>
         <a href="${p}#product">Product</a>
         <a href="${p}#features">Results</a>
         <a href="${p}#roadmap">Roadmap</a>
@@ -171,7 +170,7 @@ const pages = [
   {
     slug: "about",
     title: "About | Headloom",
-    description: "Headloom makes AI fashion images catalogue-ready, using Claude to find and retouch garment artifacts. Built in Chennai, India.",
+    description: "Headloom is built in Chennai, India. Meet the team and see our company details.",
   },
   {
     slug: "privacy",

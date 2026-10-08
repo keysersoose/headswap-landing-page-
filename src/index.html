@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#050505" />
-    <meta name="description" content="Headloom uses Claude as an AI agent that finds and retouches garment artifacts in AI-generated fashion images, so every image matches the real product. Built for fashion catalogue and campaign teams." />
+    <meta name="description" content="Headloom is an AI head-swap workspace for fashion, catalogue and campaign teams: approved identities in, human-reviewed high-resolution outputs out." />
     <meta name="author" content="Headloom" />
     <meta property="og:title" content="Headloom | AI head swap for creative production" />
-    <meta property="og:description" content="Headloom uses Claude as an AI agent that finds and retouches garment artifacts in AI-generated fashion images, so every image matches the real product. Built for fashion catalogue and campaign teams." />
+    <meta property="og:description" content="Headloom is an AI head-swap workspace for fashion, catalogue and campaign teams: approved identities in, human-reviewed high-resolution outputs out." />
     <meta property="og:url" content="https://headloom.com" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://headloom.com/og-image.jpg" />
@@ -16,13 +16,13 @@
     <meta property="og:image:alt" content="Headloom head-swap result: a model in a blue jacket in a neon-lit room" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Headloom | AI head swap for creative production" />
-    <meta name="twitter:description" content="Headloom uses Claude as an AI agent that finds and retouches garment artifacts in AI-generated fashion images, so every image matches the real product. Built for fashion catalogue and campaign teams." />
+    <meta name="twitter:description" content="Headloom is an AI head-swap workspace for fashion, catalogue and campaign teams: approved identities in, human-reviewed high-resolution outputs out." />
     <meta name="twitter:image" content="https://headloom.com/og-image.jpg" />
     <link rel="canonical" href="https://headloom.com/" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <title>Headloom | Claude-powered garment refinement for AI fashion images</title>
+    <title>Headloom | AI head swap for creative production</title>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -45,7 +45,7 @@
           "founder": [
             { "@type": "Person", "name": "Vishaal Ravi" }
           ],
-          "description": "Headloom makes AI-generated fashion images catalogue-ready. It uses Anthropic's Claude as an AI agent that compares each AI image with the real product shot, finds garment artifacts such as warped prints, broken buttons and changed collars, and retouches them through Headloom's image tools, with a person approving every final image. The Claude refinement agent is in pilot; Headloom's head-swap engine already runs in production on fashion catalogue work."
+          "description": "Headloom builds AI tools for creative production teams. Our first product is controlled AI head swap for catalogue and campaign work, with upcoming fashion AI products for hallucination and artifact fixing at high image volume."
         },
         {
           "@type": "SoftwareApplication",
@@ -53,7 +53,7 @@
           "applicationCategory": "MultimediaApplication",
           "operatingSystem": "Web",
           "url": "https://headloom.com",
-          "description": "AI fashion image workspace built on Claude: AI head swap plus a Claude agent that finds and retouches garment artifacts in AI-generated images, with human approval before export.",
+          "description": "AI head-swap workspace: bring an approved identity and a target image, then generate, review, and export from one controlled workflow.",
           "provider": { "@id": "https://headloom.com/#organization" }
         },
         {
@@ -83,21 +83,21 @@
       <section class="hero section-shell" id="hero" aria-labelledby="hero-title">
         <div class="hero-grid" aria-hidden="true"></div>
         <div class="hero-content reveal">
-          <p class="eyebrow">Built on Claude · AI fashion imagery</p>
+          <p class="eyebrow">AI head-swap product · fashion production stack</p>
           <h1 id="hero-title">
-            <span>AI fashion images</span>
-            <strong>garment-perfect</strong>
-            <span>before they ship</span>
+            <span>Head swaps</span>
+            <strong>that hold up</strong>
+            <span>in real production</span>
           </h1>
           <p class="hero-copy">
-            Image models often get the garment wrong: warped prints, broken buttons, changed collars, fabric that looks fake.<br />
-            Headloom uses Claude as the AI agent that finds these garment artifacts and retouches them until the image matches the real product.
+            Headloom is an AI head-swap product for fashion, catalogue and campaign teams.<br />
+            Bring an approved identity and a target image — generate, review, and export from one controlled workflow.
           </p>
           <div class="hero-actions">
-            <a class="button button-solid" href="#claude">How we use Claude</a>
-            <a class="button button-outline" href="#product">See the workspace</a>
+            <a class="button button-solid" href="#product">See the workspace</a>
+            <a class="button button-outline" href="#roadmap">See the roadmap</a>
           </div>
-          <p class="hero-note">Claude refinement agent in pilot · head-swap engine in production at {{PROOF_VOLUME}} images a month</p>
+          <p class="hero-note">Built for catalogue, campaign, and high-volume creative production · proven in production at {{PROOF_VOLUME}} images a month</p>
         </div>
         <div class="scroll-cue" aria-hidden="true"><span></span>Scroll to inspect</div>
       </section>
@@ -198,23 +198,6 @@
         </div>
       </section>
 
-      <section class="claude-section section-shell" id="claude" aria-labelledby="claude-title">
-        <div class="workflow-heading reveal">
-          <p class="eyebrow">What we are building on Claude</p>
-          <h2 id="claude-title">Claude refines the garment in every AI image.</h2>
-          <p class="claude-lead">Headloom makes AI-generated fashion images catalogue-ready. We are building Claude as the agent that compares each AI image with the real product shot, finds the garment artifacts, and runs the retouch through our image tools until the garment matches. A person approves every final image.</p>
-        </div>
-        <div class="feature-grid claude-steps reveal">
-          <article class="feature-claude"><span>1 · Find · Claude</span><h3>Claude spots what the image model got wrong.</h3><p>Claude's vision compares the AI image with the product shot and lists every garment artifact: warped prints, broken buttons, changed collars, wrong fabric texture, missing logos or stitching.</p></article>
-          <article class="feature-claude"><span>2 · Retouch · Claude</span><h3>Claude plans the fix and runs it.</h3><p>Using tool calls, Claude drives Headloom's retouching tools on each flagged area, then checks the result again and repeats until the garment matches the source.</p></article>
-          <article><span>3 · Approve · Human</span><h3>A person signs off every final image.</h3><p>The reviewer sees the before, the after and Claude's notes side by side, and approves, corrects or rejects. Nothing is exported without that approval.</p></article>
-        </div>
-        <dl class="claude-facts reveal">
-          <div><dt>Status</dt><dd>Claude refinement agent in pilot. Head-swap engine already in production on catalogue work for {{PROOF_CLIENTS}}.</dd></div>
-          <div><dt>Next with Claude</dt><dd>Running the agent on full catalogue volume in paid pilots, sharper vision on fine garment detail like prints, stitching and logos, and more reliable tool use across our retouching tools.</dd></div>
-        </dl>
-      </section>
-
       <section class="product-section section-shell" id="product" aria-labelledby="product-title">
         <div class="demo-heading reveal">
           <p class="eyebrow">The product</p>
@@ -288,7 +271,7 @@
           <article><span>Identity library</span><h3>Keep approved source identities organised.</h3><p>Separate reference assets from targets and retain the permission context your team needs.</p></article>
           <article><span>Batch queue</span><h3>Move a catalogue through one review path.</h3><p>Structure work by project, look, and approval state instead of passing loose files around.</p></article>
           <article><span>Visual review</span><h3>Compare the target and output before export.</h3><p>Inspect lighting, hair, occlusion, and composition with a clear human approval gate.</p></article>
-          <article class="feature-claude"><span>Garment refinement agent · Claude · in pilot</span><h3>Claude finds and retouches garment artifacts.</h3><p>Claude compares each generated image with its source, finds garment artifacts, identity drift and lighting, hair or occlusion errors, and runs the retouch on what it finds, so the reviewer starts from a corrected image with notes.</p></article>
+          <article class="feature-claude"><span>AI quality check · Claude · in pilot</span><h3>Every output checked against its source by Claude.</h3><p>Claude's vision model compares each generated image with its target and flags garment changes, identity drift, and lighting, hair or occlusion errors, so the reviewer starts with the problems already marked.</p></article>
           <article class="feature-claude"><span>Captions &amp; metadata · Claude · in pilot</span><h3>Catalogue-ready captions for every approved image.</h3><p>Claude drafts product captions and image metadata for each approved output, ready for the reviewer to accept and export with the image.</p></article>
           <article><span>Production handoff</span><h3>Export only the outputs your team approves.</h3><p>Define format, resolution, retention, and delivery expectations during the pilot.</p></article>
         </div>
@@ -336,7 +319,7 @@
       <section class="roadmap-section section-shell" id="roadmap" aria-labelledby="roadmap-title">
         <div class="workflow-heading reveal">
           <p class="eyebrow">Product line</p>
-          <h2 id="roadmap-title">Head swap live. Claude refinement next.</h2>
+          <h2 id="roadmap-title">Headswap first. Fashion AI next.</h2>
         </div>
         <div class="roadmap-grid reveal">
           <article class="roadmap-card is-live">
@@ -346,23 +329,23 @@
             <ul>
               <li>Identity library + consent context</li>
               <li>Target → generate → review → export</li>
-              <li>Claude garment refinement before delivery (in pilot)</li>
+              <li>High-resolution visual QA before delivery, with Claude flagging issues (in pilot)</li>
             </ul>
           </article>
           <article class="roadmap-card">
-            <span class="roadmap-status">In pilot · built on Claude</span>
-            <h3>Claude garment refinement agent</h3>
-            <p>Claude compares every AI-generated fashion image with the real product shot, finds garment artifacts and retouches them through our image tools, with a person approving the final frame.</p>
+            <span class="roadmap-status">Coming next</span>
+            <h3>Agentic hallucination fixing</h3>
+            <p>For creative teams shipping high-scale image volume daily: detect and repair AI hallucinations before they hit catalogue or campaign delivery. It builds on the Claude-based quality check now in pilot inside the head-swap workflow.</p>
             <ul>
-              <li>Finds warped prints, broken buttons, changed collars, fake fabric</li>
-              <li>Runs the retouch with tool calls, then re-checks</li>
+              <li>Production-scale image queues</li>
+              <li>Agentic review loops on failure modes, built on Claude</li>
               <li>Fits the same human-gated workflow</li>
             </ul>
           </article>
           <article class="roadmap-card">
             <span class="roadmap-status">Coming next</span>
-            <h3>Refinement at catalogue volume</h3>
-            <p>Run the Claude refinement agent across full daily catalogue queues, so fashion and ecommerce teams keep the speed of AI imagery without shipping broken garments.</p>
+            <h3>AI artifact fixing</h3>
+            <p>Clean artifacts that break fashion and ecommerce creative — so teams keep speed without shipping broken frames.</p>
             <ul>
               <li>Artifact detection on high-res stills</li>
               <li>Repair paths tuned for fashion imagery</li>
@@ -377,12 +360,12 @@
           <div>
             <p class="eyebrow">Company</p>
             <h2 id="company-title">What Headloom is</h2>
-            <p class="company-lead">Headloom makes AI-generated fashion images catalogue-ready. Our head-swap workspace is the product teams use today, and we are building Claude into it as the agent that finds and retouches garment artifacts before anything ships.</p>
+            <p class="company-lead">Headloom builds AI production tools for creative teams who handle high-scale imagery. Our public product today is a controlled AI head-swap workspace. Behind it is a working local product pipeline we pilot with partners before wider deployment.</p>
             <p class="company-copy">We work with catalogue, campaign and studio teams in private pilots. Every pilot runs on the customer's own approved identities and target images, with a human review gate before anything is exported.</p>
             {{PROOF_PARAGRAPH}}
           </div>
           <dl class="company-facts">
-            <div><dt>Product</dt><dd>AI head swap, plus a Claude agent that refines garment artifacts in AI fashion images (in pilot)</dd></div>
+            <div><dt>Product</dt><dd>AI head swap (general), expanding into fashion AI quality tools</dd></div>
             <div><dt>Customers</dt><dd>Catalogue, campaign, and studio production teams</dd></div>
             <div><dt>Status</dt><dd>In private pilot with production teams. Live demos on request.</dd></div>
             <div><dt>Company</dt><dd>Headloom (headloom.com), Chennai, India</dd></div>
@@ -409,7 +392,7 @@
         <div class="faq-list reveal">
           <details open>
             <summary>What is Headloom?<span aria-hidden="true">+</span></summary>
-            <p>Headloom makes AI-generated fashion images catalogue-ready. It combines AI head swap with a Claude agent that compares each image with the real product shot, finds garment artifacts and retouches them, and a person approves every final image. The head-swap engine is in production; the Claude refinement agent is in pilot.</p>
+            <p>Headloom is a general AI head-swap product for creative and catalogue teams. You bring an approved identity and a target image; Headloom generates a reviewable output inside one controlled workflow. Headswap is the starting product — we are building adjacent fashion AI tools for hallucination fixing and artifact fixing at high image scale.</p>
           </details>
           <details>
             <summary>Can we try it on our own images?<span aria-hidden="true">+</span></summary>
@@ -425,7 +408,7 @@
           </details>
           <details>
             <summary>What comes after headswap?<span aria-hidden="true">+</span></summary>
-            <p>The Claude garment refinement agent, now in pilot, is next. After that we run it across full daily catalogue queues for fashion and ecommerce teams, inside the same review-gated workflow.</p>
+            <p>Next products focus on fashion and ecommerce creative ops: agentic hallucination fixing and AI artifact fixing for teams that process high volumes of images every day — same review-gated production mindset.</p>
           </details>
           <details>
             <summary>How fast can a project turn around?<span aria-hidden="true">+</span></summary>
