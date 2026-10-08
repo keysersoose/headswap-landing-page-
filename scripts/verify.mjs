@@ -16,11 +16,15 @@ requireMatch(html.includes('id="workflow"'), "SaaS workflow target #workflow is 
 requireMatch(html.includes('id="demo"'), "Demo target #demo is missing.");
 requireMatch(!html.includes('href="/demo"'), "Internal demo links must not target the old 404 route.");
 requireMatch(!html.includes("data-result="), "The mismatched result selector gallery must stay removed.");
-requireMatch((html.match(/9-f\.webp/g) || []).length === 1, "Workspace must show one approved 9-f reference.");
+requireMatch((html.match(/data-identity-img src="\/assets\/media\/9-f\.webp"/g) || []).length === 1, "Workspace must show one approved 9-f reference.");
 requireMatch((html.match(/9-t\.webp/g) || []).length >= 2, "Workspace and inspector must use the corresponding 9-t target.");
 requireMatch((html.match(/9-r\.webp/g) || []).length >= 2, "Workspace and inspector must use the corresponding 9-r result.");
 requireMatch(html.includes("data-run-demo"), "SaaS generation preview control is missing.");
-requireMatch((html.match(/<details>/g) || []).length === 3, "Expected three FAQ accordions.");
+requireMatch((html.match(/<details>/g) || []).length === 7, "Expected seven closed FAQ accordions.");
+requireMatch(!html.includes("Is this only a landing page?"), "The 'only a landing page' FAQ must stay removed.");
+requireMatch(!html.includes("Landing page + working product"), "The old Status line must stay removed.");
+requireMatch(html.includes('id="pricing"'), "Pricing target #pricing is missing.");
+requireMatch(html.indexOf('id="faq"') < html.indexOf('id="pricing"') && html.indexOf('id="pricing"') < html.indexOf('class="cta-section'), "Pricing must sit between the FAQ and the final call to action.");
 requireMatch(css.includes("--obsidian: #050505"), "Obsidian design token is missing.");
 requireMatch(css.includes("--white: #ffffff"), "White design token is missing.");
 requireMatch(!/212\s*,\s*175\s*,\s*55|#d4af37|45 80% 65%/i.test(css), "Gold styling remains in the recovered design.");
@@ -32,6 +36,49 @@ const assetNames = [...html.matchAll(/\/assets\/media\/([^"')]+)/g)].map((match)
 for (const name of new Set(assetNames)) {
   const file = resolve(root, "assets", "media", name);
   requireMatch(existsSync(file) && statSync(file).size > 0, `Missing media asset: ${name}`);
+}
+
+// Every built page: shared footer, no link to the old cal.com booking page, no visible placeholders, internal links resolve.
+const pages = ["index.html", "about/index.html", "privacy/index.html", "terms/index.html", "responsible-use/index.html"];
+const pageExists = (path) => path === "/" || existsSync(resolve(root, `.${path}`, "index.html")) || existsSync(resolve(root, `.${path}`));
+for (const page of pages) {
+  const file = resolve(root, page);
+  if (!existsSync(file)) { failures.push(`Missing built page: ${page} (run npm run build)`); continue; }
+  const source = readFileSync(file, "utf8");
+  const visible = source.replace(/<!--[\s\S]*?-->/g, "").replace(/<script[\s\S]*?<\/script>/g, "");
+  requireMatch(source.includes('class="site-footer"') && source.includes('class="footer-legal"'), `${page}: site footer is missing.`);
+  requireMatch(source.includes('class="site-header"'), `${page}: site header is missing.`);
+  requireMatch(!/Latent\s*Mind|LLPIN/i.test(source), `${page}: must not name the legal entity.`);
+  requireMatch(!/suraj/i.test(source), `${page}: must not name Suraj.`);
+  requireMatch(!source.includes("cal.com/suraj-"), `${page}: links to the old cal.com booking page.`);
+  requireMatch(!/\{\{|\[(FULL|HEADLOOM|DATE|LinkedIn)/.test(visible), `${page}: unfilled placeholder text is visible.`);
+  for (const [, href] of source.matchAll(/href="(\/[^"#?]*)/g)) {
+    requireMatch(pageExists(href), `${page}: internal link ${href} does not resolve.`);
+  }
+}
+
+const llms = existsSync(resolve(root, "llms.txt")) ? readFileSync(resolve(root, "llms.txt"), "utf8") : "";
+requireMatch(llms.startsWith("# Headloom"), "llms.txt is missing or malformed (run npm run build).");
+requireMatch(!/\{\{|Latent\s*Mind|LLPIN|suraj|8m\s*studio/i.test(llms), "llms.txt has an unfilled token or names the legal entity.");
+
+// The Claude Startups form answers must appear word for word on the site.
+const { default: siteConfig } = await import("../site.config.mjs");
+const aboutHtml = readFileSync(resolve(root, "about/index.html"), "utf8");
+const llmsTxt = readFileSync(resolve(root, "llms.txt"), "utf8");
+const formQuestions = ["What are you building on Claude", "Where do you want support from Anthropic", "support from Anthropic", "API credits"];
+for (const question of formQuestions) {
+  for (const [page, text] of [["homepage", html], ["/about", aboutHtml], ["llms.txt", llmsTxt]]) {
+    requireMatch(!text.includes(question), `${page} must not show the form question "${question}".`);
+  }
+}
+const { building } = siteConfig.claudeAnswers;
+requireMatch(siteConfig.claudeAnswers.support.length < 500, 'Claude answer "support" must be under 500 characters.');
+for (const [name, answer] of Object.entries({ building })) {
+  const htmlAnswer = answer.replace(/&/g, "&amp;");
+  requireMatch(answer.length < 500, `Claude answer "${name}" must be under 500 characters.`);
+  requireMatch(html.includes(htmlAnswer), `Homepage must show the Claude answer "${name}" word for word.`);
+  requireMatch(aboutHtml.includes(htmlAnswer), `/about must show the Claude answer "${name}" word for word.`);
+  requireMatch(llmsTxt.includes(answer), `llms.txt must include the Claude answer "${name}" word for word.`);
 }
 
 if (failures.length) {

@@ -3,3 +3,6 @@ assets/images/
 .qa/
 *.md
 scripts/
+src/
+site.config.mjs
+package.json
