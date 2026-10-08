@@ -15,7 +15,7 @@
 - Customers: fashion and apparel brands, catalogue and ecommerce teams, campaign teams, photo studios and production houses
 - Commercial model: scoped paid pilot on 50–100 of the customer's own images, then per-image production pricing based on volume, resolution and turnaround
 - Location: {{OFFICE_PLAIN}}
-- Founded: 2026
+- Founded: May 2026
 - Leadership: Vishaal Ravi, Co-founder (engineering and delivery) — https://www.linkedin.com/in/vishaal-r
 - Contact: {{EMAIL_PLAIN}}
 
